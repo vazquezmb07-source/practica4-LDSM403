@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción - TechAcademy</title>
+    
+    <!-- Hoja de Estilos CSS -->
+    <link rel="stylesheet" href="css/miEstilo.css">
+
+    <!-- Tipografía Montserrat e Iconos FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Encabezado / Navegación Principal -->
+    <header>
+        <div id="logo">
+            <h1>TechAcademy</h1>
+        </div>
+        <nav class="navPrincipal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="mentorias.html">Mentorías</a></li>
+                <li><a href="inscripcion.html" id="btn_destacado">Inscribirse</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="contenedor_principal">
+        <section id="seccion_inscripcion">
+            <div class="formulario_header">
+                <h2>Formulario de Inscripción</h2>
+                <p>Completa tus datos para apartar tu lugar en el curso de tu elección.</p>
+            </div>
+
+            <!-- Formulario con Método GET -->
+            <form action="inscripcion.html" method="GET" class="formulario_inscripcion">
+                
+                <!-- Nombre Completo -->
+                <div class="campo_grupo">
+                    <label for="nombre">Nombre Completo *</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+                </div>
+
+                <!-- Correo Electrónico -->
+                <div class="campo_grupo">
+                    <label for="email">Correo Electrónico *</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <!-- Teléfono -->
+                <div class="campo_grupo">
+                    <label for="telefono">Número de Teléfono *</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="10 dígitos" pattern="[0-9]{10}" title="Ingresa un número telefónico de 10 dígitos" required>
+                </div>
+
+                <!-- Selección de Curso -->
+                <div class="campo_grupo">
+                    <label for="curso">Curso de Interés *</label>
+                    <select id="curso" name="curso" required>
+                        <option value="" disabled selected>-- Selecciona un curso --</option>
+                        <option value="desarrollo_web">Curso de Desarrollo Web Moderno</option>
+                        <option value="python_datos">Curso de Python y Ciencia de Datos</option>
+                        <option value="bases_datos">Curso de Bases de Datos Profesionales</option>
+                        <option value="backend_apis">Curso de Desarrollo Backend y APIs</option>
+                    </select>
+                </div>
+
+                <!-- Modalidad / Horario -->
+                <div class="campo_grupo">
+                    <label for="horario">Horario Preferido *</label>
+                    <select id="horario" name="horario" required>
+                        <option value="" disabled selected>-- Selecciona un horario --</option>
+                        <option value="matutino">Matutino (8:00 AM - 12:00 PM)</option>
+                        <option value="vespertino">Vespertino (4:00 PM - 8:00 PM)</option>
+                        <option value="sabatino">Sabatino (9:00 AM - 2:00 PM)</option>
+                    </select>
+                </div>
+
+                <!-- Botón de Envío -->
+                <button type="submit" id="btn_accion" class="btn_enviar">Completar Inscripción</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2026 TechAcademy. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
